@@ -1,0 +1,371 @@
+/* Reset and base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f5f7fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* App container */
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Main card */
+.converter-card {
+  width: 100%;
+  max-width: 600px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  margin: 0 auto;
+}
+
+/* App title */
+.app-title {
+  font-size: 28px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #2d3748;
+}
+
+/* Input sections */
+.input-section {
+  margin-bottom: 30px;
+}
+
+.input-group {
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.input-row {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.input-row .input-group {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #4a5568;
+  margin-bottom: 6px;
+}
+
+.date-input,
+.time-input,
+.timezone-select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: white;
+  transition: border-color 0.2s ease;
+}
+
+.date-input:focus,
+.time-input:focus,
+.timezone-select:focus {
+  border-color: #4299e1;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.15);
+}
+
+/* Buttons */
+.convert-button {
+  width: 100%;
+  padding: 12px 20px;
+  background-color: #3182ce;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.convert-button:hover {
+  background-color: #2b6cb0;
+}
+
+.add-button {
+  padding: 6px 12px;
+  background-color: #e2e8f0;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #4a5568;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.add-button:hover:not(:disabled) {
+  background-color: #cbd5e0;
+}
+
+.add-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.remove-button {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #e53e3e;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+}
+
+.remove-button:hover:not(:disabled) {
+  opacity: 1;
+}
+
+.remove-button:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.copy-button {
+  padding: 6px 12px;
+  background-color: #e2e8f0;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #4a5568;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.copy-button:hover {
+  background-color: #cbd5e0;
+}
+
+.copy-button.copied {
+  background-color: #48bb78;
+  color: white;
+}
+
+/* Section headers */
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.section-header h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2d3748;
+}
+
+/* Timezone sections */
+.target-zones-section {
+  margin-bottom: 30px;
+}
+
+.timezone-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.timezone-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.timezone-select {
+  flex: 1;
+}
+
+/* Results section */
+.results-section {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.result-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.result-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.result-item:last-child {
+  border-bottom: none;
+}
+
+.base-timezone {
+  background-color: rgba(66, 153, 225, 0.08);
+  border-radius: 6px;
+}
+
+.timezone-name {
+  font-size: 15px;
+  color: #4a5568;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.your-timezone-badge {
+  font-size: 12px;
+  background-color: #4299e1;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-weight: 500;
+}
+
+.converted-time {
+  font-size: 15px;
+  font-weight: 600;
+  color: #2d3748;
+}
+
+/* Footer */
+.app-footer {
+  text-align: center;
+  font-size: 14px;
+  color: #a0aec0;
+  margin-top: 20px;
+}
+
+/* Responsiveness */
+@media (max-width: 576px) {
+  .converter-card {
+    padding: 20px;
+  }
+  
+  .input-row {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .app-title {
+    font-size: 24px;
+  }
+  
+  .result-item {
+    flex-direction: column;
+    gap: 6px;
+  }
+  
+  .converted-time {
+    align-self: flex-end;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #1a202c;
+    color: #e2e8f0;
+  }
+  
+  .converter-card {
+    background-color: #2d3748;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  }
+  
+  .app-title {
+    color: #e2e8f0;
+  }
+  
+  label {
+    color: #a0aec0;
+  }
+  
+  .date-input,
+  .time-input,
+  .timezone-select {
+    background-color: #4a5568;
+    border-color: #2d3748;
+    color: #e2e8f0;
+  }
+  
+  .section-header h2 {
+    color: #e2e8f0;
+  }
+  
+  .add-button {
+    background-color: #4a5568;
+    color: #e2e8f0;
+  }
+  
+  .add-button:hover:not(:disabled) {
+    background-color: #718096;
+  }
+  
+  .copy-button {
+    background-color: #4a5568;
+    color: #e2e8f0;
+  }
+  
+  .copy-button:hover {
+    background-color: #718096;
+  }
+  
+  .results-section {
+    background-color: #4a5568;
+    border-color: #2d3748;
+  }
+  
+  .result-item {
+    border-bottom-color: #2d3748;
+  }
+  
+  .base-timezone {
+    background-color: rgba(66, 153, 225, 0.15);
+  }
+  
+  .timezone-name {
+    color: #cbd5e0;
+  }
+  
+  .converted-time {
+    color: #e2e8f0;
+  }
+}
