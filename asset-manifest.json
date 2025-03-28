@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/timezone-converter/static/css/main.3d4e5b3d.css",
-    "main.js": "/timezone-converter/static/js/main.0a572682.js",
+    "main.css": "/timezone-converter/static/css/main.223d8dbe.css",
+    "main.js": "/timezone-converter/static/js/main.9d8c8f61.js",
     "index.html": "/timezone-converter/index.html",
-    "main.3d4e5b3d.css.map": "/timezone-converter/static/css/main.3d4e5b3d.css.map",
-    "main.0a572682.js.map": "/timezone-converter/static/js/main.0a572682.js.map"
+    "main.223d8dbe.css.map": "/timezone-converter/static/css/main.223d8dbe.css.map",
+    "main.9d8c8f61.js.map": "/timezone-converter/static/js/main.9d8c8f61.js.map"
   },
   "entrypoints": [
-    "static/css/main.3d4e5b3d.css",
-    "static/js/main.0a572682.js"
+    "static/css/main.223d8dbe.css",
+    "static/js/main.9d8c8f61.js"
   ]
 }
