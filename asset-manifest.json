@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/shankardas1/timezone-converter.git/static/css/main.3d4e5b3d.css",
+    "main.js": "/shankardas1/timezone-converter.git/static/js/main.0a572682.js",
+    "index.html": "/shankardas1/timezone-converter.git/index.html",
+    "main.3d4e5b3d.css.map": "/shankardas1/timezone-converter.git/static/css/main.3d4e5b3d.css.map",
+    "main.0a572682.js.map": "/shankardas1/timezone-converter.git/static/js/main.0a572682.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3d4e5b3d.css",
+    "static/js/main.0a572682.js"
+  ]
+}
